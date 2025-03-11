@@ -1,0 +1,359 @@
+:root {
+  --primary-color: #020228;
+  --secondary-color: #ff00e5;
+  --tertiary-color: #b535f6;
+  --btn-bg-color-gradient: linear-gradient(
+    45deg,
+    #9b34ef 0%,
+    #490cb0 20%,
+    transparent 50%
+  );
+  --btn-link-bg-color: #fff;
+  --btn-link-color: #000;
+  --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+  --divider-bg-color: linear-gradient(
+    90deg,
+    #5516ba,
+    rgba(255, 0, 229, 0.5) 80%
+  );
+  --nav-bg-color: rgba(0, 0, 0, 0.3);
+  --text-color: #fff;
+  --link-color: #9e86ff;
+  --form-bg-color: rgba(211, 211, 211, 0.06);
+  --form-field-bg-color: rgba(0, 0, 0, 0.2);
+  --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+  --form-field-placeholder: rgba(255, 255, 255, 0.7);
+  --form-field-error: rgb(255, 76, 76);
+
+  scroll-behavior: smooth;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-color); 
+}
+
+*{
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.menu{
+  width: 100%;
+  padding: 12px 16px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--nav-bg-color);
+  z-index: 1;
+}
+
+.menu__logo{
+  max-width: 160px;
+}
+
+.menu__logo-image{
+  width: 100%;
+}
+
+.menu__item{
+  margin-right: 24px;
+  font-weight: 700;
+  font-size: 0.75;
+  color: var(--text-color);
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.menu__item--button{
+  padding: 8px 26px;
+}
+.button{
+  background-color: var(--tertiary-color);
+  border-radius: 500px;
+  cursor: pointer;
+}
+
+header{
+  display: block;
+  unicode-bidi: isolate;
+}
+
+.header::after{
+  content: "";
+  width: 100%;
+  height: 250px;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(0deg, var(--primary-color), transparent);
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: 50px;
+  padding: 100px 0 300px;
+  background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
+  animation: gradient  10s ease infinite alternate;
+  gap: 50px;
+}
+
+ .header__content{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.header .texto ul li{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 30px;
+  font-size: 2rem;
+  
+}
+
+.texto ul li{
+  list-style-type: none;
+}
+
+.texto .texto-2{
+  font-size: 10rem;
+  font-weight: 900; 
+}
+
+.divisor{
+  width: 700px;
+  height: 5px;
+  background: linear-gradient(
+    90deg,
+    #5516ba,
+    rgba(255, 0, 229, 0.5) 80%);
+  margin-top: 50px;
+}
+
+.oferta{
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  color: white;
+}
+
+.oferta p{
+  display: flex;
+justify-content: center;
+align-items: center;
+font-family: "quicksand", sans-serif;
+font-size: 20px;
+}
+
+.oferta .oferta__preco{
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.oferta__preco--menor{
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+  font-weight: 300;
+  padding-left: 10px;
+  margin-top: 5px;
+}
+
+@keyframes animacao{
+0%, 10%{
+  transform: rotate(0);
+}
+
+15%{
+  transform: rotate(-15deg);
+}
+
+20%{
+  transform: rotate(10deg);
+}
+25%{
+  transform: rotate(-10deg);
+}
+30%{
+  transform: rotate(10deg);
+}
+35%{
+  transform: rotate(-10deg);
+}
+40%, 100%{
+  transform: rotate(0);
+}
+
+}
+
+.button{
+  padding: 16px 40px;
+  border-radius: 500px;
+  font-weight: 700;
+  color: var(--text-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.button.button--gradiente{
+  background: var(--btn-bg-color-gradient);
+  outline: 3px solid transparent;
+  transition: background 1s, outline 1s, transform 1s;
+  background-size: 250%;
+}
+
+.header__button{
+animation: animacao 2.2s linear infinite;
+}
+
+.header .texto-menor{
+  max-width: 300px;
+  text-align: center;
+}
+
+.texto-menor{
+  color: white;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.titulo{
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.container{
+  text-align: center;
+}
+
+.subscription__plans{
+  display: flex;
+  justify-content: space-around;
+  gap: 80px;
+  margin: 40px 0;
+  perspective: 2000px;
+  perspective-origin: top;
+}
+
+.subscription__card{
+  background: var(--card-bg-color);
+  padding: 40px 60px;
+  border-radius: 8px;
+  display: flex;
+  min-height: 600px;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 1s ease-in-out;
+}
+
+.subscription__plan{
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+}
+
+h3, span{
+
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    color: var(--text-color);
+}
+
+.subscription__price {
+  font-size: 2rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+.subscription__price .text--small {
+  color: var(--text-color);
+}
+
+.text--small {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  unicode-bidi: isolate;
+}
+
+.subscription__card{
+  margin: 80px;
+}
+
+.subscription__price{
+  color: var(--secondary-color);
+}
+
+.subscription__description {
+  text-align: left;
+  list-style: none;
+  font-size: 1.25rem;
+  margin-bottom: 14px;
+  padding-left: 14px;
+  color: var(--text-color);
+}
+
+.contents__container {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.contents__card {
+  border-radius: 16px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid transparent;
+  transition: transform 0.8s, background 0.8s, border 1s;
+}
+
+.contents__image {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: opacity 2s;
+}
+  
+  
+
+
+
